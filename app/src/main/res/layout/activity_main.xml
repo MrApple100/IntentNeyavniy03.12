@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="ru.mrapple100.intentneyavniy0312.BaseViewModel" />
+    </data>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Переход по номеру телефона"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="8(800)-555-35-35"
+        android:textColor="#FF00FF"
+        android:textSize="20sp"
+        android:onClick="@{() -> viewModel.clickNumber()}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Переход по номеру телефона"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@{viewModel.urlLiveData}"
+        android:textColor="#FF00FF"
+        android:textSize="20sp"
+        android:onClick="@{() -> viewModel.clickURL()}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Переход для получения картинки"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Нажать"
+        android:textColor="#FF00FF"
+        android:textSize="20sp"
+        android:onClick="@{() -> viewModel.chooseImage()}"/>
+    <ImageView
+        android:id="@+id/Image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Переход для отправки письма"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Отправить письмо"
+        android:textColor="#FF00FF"
+        android:textSize="20sp"
+        android:onClick="@{() -> viewModel.clickEmail()}"/>
+
+</LinearLayout>
+</layout>
